@@ -281,6 +281,7 @@
         };
 
         Game {
+            display-name = "Game";
             bindings = <
 &mt TAB ESCAPE  &kp T      &kp Q  &kp W         &kp E  &kp R        &to 0   &kp F5  &kp F9  &kp F11  &trans  &trans
 &kp LCTRL       &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &trans  &trans  &trans  &trans   &trans  &trans
@@ -290,6 +291,7 @@
         };
 
         GameNum {
+            display-name = "GameNum";
             bindings = <
 &kp TAB    &trans     &kp NUMBER_1  &kp N2  &kp N3  &kp N4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans
 &kp LCTRL  &kp LSHFT  &kp N5        &kp N6  &kp N7  &kp N8    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans
@@ -299,6 +301,7 @@
         };
 
         League {
+            display-name = "League";
             bindings = <
 &kp TAB  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5       &to 0   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
 &trans   &kp Q   &kp W   &kp E   &kp R      &kp N6       &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
