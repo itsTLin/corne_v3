@@ -312,6 +312,7 @@
         };
 
         Game {
+            display-name = "Game";
             bindings = <
 &kp TAB    &kp T      &kp Q  &kp W         &kp E  &kp R        &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
 &kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
