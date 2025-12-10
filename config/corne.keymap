@@ -50,6 +50,7 @@
         percent {
             bindings = <&kp PERCENT>;
             key-positions = <5 17>;
+            layers = <0>;
         };
 
         caret {
@@ -192,6 +193,30 @@
             key-positions = <0 12>;
             layers = <4 6>;
         };
+
+        toGame {
+            bindings = <&to 4>;
+            key-positions = <38 39>;
+            layers = <0>;
+        };
+
+        fromGame {
+            bindings = <&to 0>;
+            key-positions = <38 39>;
+            layers = <4>;
+        };
+
+        toLeague {
+            bindings = <&to 6>;
+            key-positions = <37 40>;
+            layers = <0>;
+        };
+
+        fromLeague {
+            bindings = <&to 0>;
+            key-positions = <37 40>;
+            layers = <6>;
+        };
     };
 
     macros {
@@ -288,10 +313,10 @@
 
         Game {
             bindings = <
-&kp TAB    &kp T      &kp Q  &kp W         &kp E  &kp R        &to 0   &kp F5  &kp F9  &kp F11  &trans  &trans
+&kp TAB    &kp T      &kp Q  &kp W         &kp E  &kp R        &none   &kp F5  &kp F9  &kp F11  &trans  &trans
 &kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &trans  &trans  &trans  &trans   &trans  &trans
 &kp N      &kp I      &kp Z  &kp X         &kp C  &kp V        &trans  &trans  &trans  &trans   &trans  &trans
-                             &kp LEFT_ALT  &mo 5  &kp SPACE    &trans  &trans  &trans
+                             &kp LEFT_ALT  &sl 5  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
@@ -308,10 +333,10 @@
         League {
             display-name = "League";
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5       &to 0   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&trans   &kp Q   &kp W   &kp E   &kp R      &kp N6       &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans   &kp A   &kp S   &kp D   &kp F      &kp N7       &trans  &kp F11  &kp F12  &trans  &trans  &trans
-                         &trans  &kp LCTRL  &kp SPACE    &trans  &trans   &trans
+&kp TAB  &kp N1  &kp N2  &kp N3        &kp N4     &kp N5       &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&kp G    &kp Q   &kp W   &kp E         &kp R      &kp N6       &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&kp T    &kp A   &kp S   &kp D         &kp F      &kp N7       &trans  &kp F11  &kp F12  &trans  &trans  &trans
+                         &kp LEFT_ALT  &kp LCTRL  &kp SPACE    &trans  &trans   &trans
             >;
         };
     };
