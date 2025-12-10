@@ -186,6 +186,12 @@
             key-positions = <5 17>;
             layers = <4>;
         };
+
+        gameEsc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 12>;
+            layers = <4 6>;
+        };
     };
 
     macros {
@@ -281,12 +287,11 @@
         };
 
         Game {
-            display-name = "Game";
             bindings = <
-&mt TAB ESCAPE  &kp T      &kp Q  &kp W         &kp E  &kp R        &to 0   &kp F5  &kp F9  &kp F11  &trans  &trans
-&kp LCTRL       &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &trans  &trans  &trans  &trans   &trans  &trans
-&kp N           &kp I      &kp Z  &kp X         &kp C  &kp V        &trans  &trans  &trans  &trans   &trans  &trans
-                                  &kp LEFT_ALT  &mo 5  &kp SPACE    &trans  &trans  &trans
+&kp TAB    &kp T      &kp Q  &kp W         &kp E  &kp R        &to 0   &kp F5  &kp F9  &kp F11  &trans  &trans
+&kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &trans  &trans  &trans  &trans   &trans  &trans
+&kp N      &kp I      &kp Z  &kp X         &kp C  &kp V        &trans  &trans  &trans  &trans   &trans  &trans
+                             &kp LEFT_ALT  &mo 5  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
