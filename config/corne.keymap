@@ -302,10 +302,10 @@
         Game {
             display-name = "Game";
             bindings = <
-&kp TAB    &kp T      &kp Q  &kp W         &kp E    &kp R        &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&kp TAB    &kp G      &kp Q  &kp W         &kp E    &kp R        &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
 &kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D    &kp F        &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&kp N      &kp I      &kp Z  &kp X         &kp C    &kp V        &trans  &kp F11  &kp F12  &trans  &trans  &trans
-                             &kp LEFT_ALT  &lt 5 G  &kp SPACE    &trans  &trans   &trans
+&kp M      &kp I      &kp Z  &kp X         &kp C    &kp V        &trans  &kp F11  &kp F12  &trans  &trans  &trans
+                             &kp LEFT_ALT  &lt 5 B  &kp SPACE    &trans  &trans   &trans
             >;
         };
 
