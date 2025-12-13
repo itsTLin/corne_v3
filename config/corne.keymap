@@ -176,18 +176,6 @@
             key-positions = <33 32>;
         };
 
-        game_B {
-            bindings = <&kp B>;
-            key-positions = <17 29>;
-            layers = <4 6>;
-        };
-
-        game_G {
-            bindings = <&kp G>;
-            key-positions = <5 17>;
-            layers = <4>;
-        };
-
         gameEsc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 12>;
@@ -314,20 +302,20 @@
         Game {
             display-name = "Game";
             bindings = <
-&kp TAB    &kp T      &kp Q  &kp W         &kp E  &kp R        &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&kp N      &kp I      &kp Z  &kp X         &kp C  &kp V        &trans  &kp F11  &kp F12  &trans  &trans  &trans
-                             &kp LEFT_ALT  &sl 5  &kp SPACE    &trans  &trans   &trans
+&kp TAB    &kp T      &kp Q  &kp W         &kp E    &kp R        &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D    &kp F        &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&kp N      &kp I      &kp Z  &kp X         &kp C    &kp V        &trans  &kp F11  &kp F12  &trans  &trans  &trans
+                             &kp LEFT_ALT  &lt 5 G  &kp SPACE    &trans  &trans   &trans
             >;
         };
 
         GameNum {
             display-name = "GameNum";
             bindings = <
-&kp TAB    &trans     &kp NUMBER_1  &kp N2  &kp N3  &kp N4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans
-&kp LCTRL  &kp LSHFT  &kp N5        &kp N6  &kp N7  &kp N8    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans
-&trans     &trans     &trans        &trans  &kp N9  &kp N0    &kp F11  &kp F12  &trans  &trans  &trans   &trans
-                                    &trans  &trans  &trans    &trans   &trans   &trans
+&kp TAB    &trans     &kp NUMBER_1  &kp N2  &kp N3     &kp N4       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans
+&kp LCTRL  &kp LSHFT  &kp N5        &kp N6  &kp N7     &kp N8       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans
+&trans     &trans     &kp N9        &kp N0  &kp MINUS  &kp EQUAL    &kp F11  &kp F12  &trans  &trans  &trans   &trans
+                                    &trans  &trans     &trans       &trans   &trans   &trans
             >;
         };
 
