@@ -23,187 +23,9 @@
     combos {
         compatible = "zmk,combos";
 
-        esclamation {
-            bindings = <&kp EXCLAMATION>;
-            key-positions = <1 13>;
-            layers = <0>;
-        };
-
-        at {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <2 14>;
-            layers = <0>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <3 15>;
-            layers = <0>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-            layers = <0>;
-        };
-
-        percent {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-            layers = <0>;
-        };
-
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <6 18>;
-            layers = <0>;
-        };
-
-        ampersand {
-            bindings = <&kp AMPERSAND>;
-            key-positions = <7 19>;
-            layers = <0>;
-        };
-
-        asterisk {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
-            layers = <0>;
-        };
-
-        left-parentheses {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <9 21>;
-            layers = <0>;
-        };
-
-        right-parentheses {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <10 22>;
-            layers = <0>;
-        };
-
-        left-braket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <15 27>;
-            layers = <0>;
-        };
-
-        right-bracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <16 28>;
-            layers = <0>;
-        };
-
-        left-brace {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <19 31>;
-            layers = <0>;
-        };
-
-        right-brace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <20 32>;
-            layers = <0>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <17 29>;
-            layers = <0>;
-        };
-
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <18 30>;
-            layers = <0>;
-        };
-
         enter {
             bindings = <&kp ENTER>;
             key-positions = <37 29>;
-        };
-
-        prmc {
-            bindings = <&prmc>;
-            key-positions = <31 32>;
-            layers = <0>;
-        };
-
-        bkmc {
-            bindings = <&bkmc>;
-            key-positions = <32 33>;
-            layers = <0>;
-        };
-
-        bcmc {
-            bindings = <&bcmc>;
-            key-positions = <33 34>;
-            layers = <0>;
-        };
-
-        copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <26 27>;
-            layers = <0>;
-        };
-
-        paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <27 28>;
-            layers = <0>;
-        };
-
-        new-tab {
-            bindings = <&kp LC(T)>;
-            key-positions = <16 17>;
-            layers = <0>;
-        };
-
-        open-tab {
-            bindings = <&kp LC(LS(T))>;
-            key-positions = <17 16 15>;
-        };
-
-        numpad-period {
-            bindings = <&kp PERIOD>;
-            key-positions = <31 32>;
-            layers = <2>;
-        };
-
-        numpad-comma {
-            bindings = <&kp COMMA>;
-            key-positions = <33 32>;
-        };
-
-        gameEsc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 12>;
-            layers = <4 6>;
-        };
-
-        toGame {
-            bindings = <&to 4>;
-            key-positions = <38 39>;
-            layers = <0>;
-        };
-
-        fromGame {
-            bindings = <&to 0>;
-            key-positions = <38 39>;
-            layers = <4>;
-        };
-
-        toLeague {
-            bindings = <&to 6>;
-            key-positions = <37 40>;
-            layers = <0>;
-        };
-
-        fromLeague {
-            bindings = <&to 0>;
-            key-positions = <37 40>;
-            layers = <6>;
         };
     };
 
@@ -242,10 +64,10 @@
 
             display-name = "Colemak";
             bindings = <
-&kp ESCAPE     &kp Q           &kp W           &kp F              &kp P         &kp B        &kp J      &kp L        &kp U              &kp Y            &kp SEMICOLON    &kp EQUAL
-&kp BACKSPACE  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_SHIFT S   &mt LCTRL T   &kp G        &kp M      &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
-&kp MINUS      &kp Z           &kp X           &kp C              &kp D         &kp V        &kp K      &kp H        &kp COMMA          &kp DOT          &kp FSLH         &kp NON_US_BACKSLASH
-                                               &lt 3 PRINTSCREEN  &lt 1 DELETE  &lt 2 TAB    &kp ENTER  &kp SPACE    &caps_word
+&kp ESCAPE     &mt EXCLAMATION Q  &mt AT_SIGN W   &mt HASH F         &mt DOLLAR P  &mt PERCENT B    &mt CARET J  &mt AMPERSAND L     &mt ASTERISK U           &mt LEFT_PARENTHESIS Y  &mt RIGHT_PARENTHESIS SEMICOLON  &kp EQUAL
+&kp BACKSPACE  &mt LEFT_GUI A     &mt LEFT_ALT R  &mt LEFT_SHIFT S   &mt LCTRL T   &mt LC(T) G      &mt LC(N) M  &mt RCTRL N         &mt RIGHT_SHIFT E        &mt RIGHT_ALT I         &mt RIGHT_GUI O                  &kp SQT
+&kp MINUS      &mt LC(Z) Z        &mt LC(X) X     &mt LC(C) C        &mt LC(V) D   &kp V            &kp K        &mt LEFT_BRACKET H  &mt RIGHT_BRACKET COMMA  &mt LEFT_BRACE PERIOD   &mt RIGHT_BRACE SLASH            &kp NON_US_BACKSLASH
+                                                  &lt 3 PRINTSCREEN  &lt 1 DELETE  &lt 2 TAB        &kp ENTER    &kp SPACE           &caps_word
             >;
 
             label = "Colemak";
@@ -260,8 +82,8 @@
 
             display-name = "NavFunc";
             bindings = <
-&trans  &none         &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none     &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp INSERT  &to 4
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT     &kp LCTRL        &none     &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp ENTER   &to 6
+&trans  &none         &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none     &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp INSERT  &to 0
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT     &kp LCTRL        &none     &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp ENTER   &to 0
 &none   &none         &kp C_PLAY    &kp C_PREVIOUS     &kp C_NEXT       &none     &none          &none     &none         &none      &none       &none
                                     &trans             &trans           &trans    &trans         &trans    &none
             >;
@@ -278,10 +100,10 @@
 
             display-name = "Numpad";
             bindings = <
-&trans  &kp F1           &kp F2           &kp F3             &kp F4        &kp F5     &kp MINUS  &kp NUMBER_7        &kp NUMBER_8        &kp NUMBER_9            &kp PLUS             &kp BSPC
-&trans  &mt LEFT_GUI F6  &mt LEFT_ALT F7  &mt LEFT_SHIFT F8  &mt LCTRL F9  &kp F10    &kp ASTRK  &mt RCTRL NUMBER_4  &mt RIGHT_SHIFT N5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_WIN ENTER  &kp COLON
-&none   &kp HOME         &kp END          &kp INS            &kp F11       &kp F12    &kp SLASH  &kp NUMBER_1        &kp NUMBER_2        &kp NUMBER_3            &kp TAB              &none
-                                          &trans             &trans        &trans     &trans     &trans              &kp NUMBER_0
+&trans  &kp F1           &kp F2           &kp F3             &kp F4        &kp F5     &kp MINUS  &kp NUMBER_7         &kp NUMBER_8        &kp NUMBER_9            &kp PLUS             &kp BSPC
+&trans  &mt LEFT_GUI F6  &mt LEFT_ALT F7  &mt LEFT_SHIFT F8  &mt LCTRL F9  &kp F10    &kp ASTRK  &mt RCTRL NUMBER_4   &mt RIGHT_SHIFT N5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_WIN ENTER  &kp COLON
+&none   &kp HOME         &kp END          &kp INS            &kp F11       &kp F12    &kp SLASH  &mt PERIOD NUMBER_1  &mt COMMA NUMBER_2  &kp NUMBER_3            &kp TAB              &none
+                                          &trans             &trans        &trans     &trans     &trans               &kp NUMBER_0
             >;
 
             label = "Numpad";
@@ -297,36 +119,6 @@
             >;
 
             label = "MouseBT";
-        };
-
-        Game {
-            display-name = "Game";
-            bindings = <
-&kp TAB    &kp G      &kp Q  &kp W         &kp E    &kp R        &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D    &kp F        &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&kp M      &kp I      &kp Z  &kp X         &kp C    &kp V        &trans  &kp F11  &kp F12  &trans  &trans  &trans
-                             &kp LEFT_ALT  &lt 5 B  &kp SPACE    &trans  &trans   &trans
-            >;
-        };
-
-        GameNum {
-            display-name = "GameNum";
-            bindings = <
-&kp TAB    &trans     &kp NUMBER_1  &kp N2  &kp N3     &kp N4       &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &trans
-&kp LCTRL  &kp LSHFT  &kp N5        &kp N6  &kp N7     &kp N8       &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans
-&trans     &trans     &kp N9        &kp N0  &kp MINUS  &kp EQUAL    &kp F11  &kp F12  &trans  &trans  &trans   &trans
-                                    &trans  &trans     &trans       &trans   &trans   &trans
-            >;
-        };
-
-        League {
-            display-name = "League";
-            bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3        &kp N4     &kp N5       &none   &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&kp G    &kp Q   &kp W   &kp E         &kp R      &kp N6       &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&kp T    &kp A   &kp S   &kp D         &kp F      &kp N7       &trans  &kp F11  &kp F12  &trans  &trans  &trans
-                         &kp LEFT_ALT  &kp LCTRL  &kp SPACE    &trans  &trans   &trans
-            >;
         };
     };
 };
