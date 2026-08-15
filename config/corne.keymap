@@ -8,11 +8,12 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 18
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
-&mt { flavor = "balanced"; };
+&mt {
+    flavor = "balanced";
+    tapping-term-ms = <250>;
+};
 
 &caps_word {
     mods = <(MOD_LSFT)>;
@@ -26,6 +27,24 @@
         enter {
             bindings = <&kp ENTER>;
             key-positions = <37 29>;
+        };
+
+        printscr {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <26 27 28>;
+            layers = <0>;
+        };
+
+        num-period {
+            bindings = <&kp PERIOD>;
+            key-positions = <31 32>;
+            layers = <2>;
+        };
+
+        num-comma {
+            bindings = <&kp COMMA>;
+            key-positions = <32 33>;
+            layers = <2>;
         };
     };
 
@@ -64,28 +83,28 @@
 
             display-name = "Colemak";
             bindings = <
-&kp ESCAPE     &mt EXCLAMATION Q  &mt AT_SIGN W   &mt HASH F         &mt DOLLAR P  &mt PERCENT B    &mt CARET J  &mt AMPERSAND L     &mt ASTERISK U           &mt LEFT_PARENTHESIS Y  &mt RIGHT_PARENTHESIS SEMICOLON  &kp EQUAL
-&kp BACKSPACE  &mt LEFT_GUI A     &mt LEFT_ALT R  &mt LEFT_SHIFT S   &mt LCTRL T   &mt LC(T) G      &mt LC(N) M  &mt RCTRL N         &mt RIGHT_SHIFT E        &mt RIGHT_ALT I         &mt RIGHT_GUI O                  &kp SQT
-&kp MINUS      &mt LC(Z) Z        &mt LC(X) X     &mt LC(C) C        &mt LC(V) D   &kp V            &kp K        &mt LEFT_BRACKET H  &mt RIGHT_BRACKET COMMA  &mt LEFT_BRACE PERIOD   &mt RIGHT_BRACE SLASH            &kp NON_US_BACKSLASH
-                                                  &lt 3 PRINTSCREEN  &lt 1 DELETE  &lt 2 TAB        &kp ENTER    &kp SPACE           &caps_word
+&kp ESCAPE  &kp Q           &kp W           &kp F             &kp P            &kp B           &kp J        &kp L        &kp U              &kp Y            &kp SEMI         &kp EQUAL
+&kp GRAVE   &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &mt LC(T) G     &kp M        &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
+&kp TILDE   &mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C       &mt LC(V) D      &mt LC(N) V     &kp K        &kp H        &kp COMMA          &kp DOT          &kp FSLH         &kp NON_US_BACKSLASH
+                                            &lt 0 TAB         &lt 1 BACKSPACE  &lt 2 DELETE    &lt 3 ENTER  &kp SPACE    &caps_word
             >;
 
             label = "Colemak";
         };
 
-        NavFunc {
+        Navigation {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "NavFunc";
+            display-name = "Navigation";
             bindings = <
-&trans  &none         &kp C_MUTE    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none     &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &kp INSERT  &to 0
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT     &kp LCTRL        &none     &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &kp ENTER   &to 0
-&none   &none         &kp C_PLAY    &kp C_PREVIOUS     &kp C_NEXT       &none     &none          &none     &none         &none      &none       &none
-                                    &trans             &trans           &trans    &trans         &trans    &none
+&trans  &none         &none         &none           &none      &none     &kp PAGE_UP    &kp HOME   &kp UP_ARROW  &kp END    &none      &none
+&none   &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none     &kp PAGE_DOWN  &kp LEFT   &kp DOWN      &kp RIGHT  &kp ENTER  &kp LC(Z)
+&none   &none         &none         &none           &none      &none     &kp INS        &kp LC(C)  &kp LC(V)     &kp LC(X)  &kp TAB    &kp LC(Y)
+                                    &trans          &trans     &trans    &trans         &trans     &none
             >;
 
             label = "NavFunc";
@@ -100,25 +119,31 @@
 
             display-name = "Numpad";
             bindings = <
-&trans  &kp F1           &kp F2           &kp F3             &kp F4        &kp F5     &kp MINUS  &kp NUMBER_7         &kp NUMBER_8        &kp NUMBER_9            &kp PLUS             &kp BSPC
-&trans  &mt LEFT_GUI F6  &mt LEFT_ALT F7  &mt LEFT_SHIFT F8  &mt LCTRL F9  &kp F10    &kp ASTRK  &mt RCTRL NUMBER_4   &mt RIGHT_SHIFT N5  &mt RIGHT_ALT NUMBER_6  &mt RIGHT_WIN ENTER  &kp COLON
-&none   &kp HOME         &kp END          &kp INS            &kp F11       &kp F12    &kp SLASH  &mt PERIOD NUMBER_1  &mt COMMA NUMBER_2  &kp NUMBER_3            &kp TAB              &none
-                                          &trans             &trans        &trans     &trans     &trans               &kp NUMBER_0
+&trans  &none         &none         &none           &none      &none     &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &none
+&none   &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &none     &kp ASTRK  &kp N4        &kp N5        &kp N6        &kp ENTER  &kp COLON
+&none   &none         &none         &none           &none      &none     &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp TAB    &none
+                                    &trans          &trans     &trans    &kp ENTER  &kp SPACE     &kp NUMBER_0
             >;
 
             label = "Numpad";
         };
 
-        MouseBT {
-            display-name = "MouseBT";
+        Symbols {
             bindings = <
-&none   &none         &none         &none           &none         &none           &msc SCRL_LEFT   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none      &none
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL     &bt BT_CLR      &msc SCRL_RIGHT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp ENTER  &none
-&none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4    &none            &mkp MB4        &mkp MB5        &mkp MB3         &none      &none
-                                    &trans          &trans        &trans          &mkp MB1         &mkp MB2        &none
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND           &none  &none      &none       &none          &none     &none
+&kp TILDE  &kp HASH         &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ASTERISK            &none  &kp LCTRL  &kp RSHIFT  &kp RIGHT_ALT  &kp RGUI  &none
+&kp EQUAL  &kp PERCENT      &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH    &none  &none      &none       &none          &none     &none
+                                         &kp UNDERSCORE        &kp MINUS              &kp PIPE                &none  &none      &none
             >;
+        };
 
-            label = "MouseBT";
+        Function {
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp F11  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans   &trans     &trans  &trans  &trans
+            >;
         };
     };
 };
