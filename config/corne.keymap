@@ -31,12 +31,6 @@
             key-positions = <37 29>;
         };
 
-        printscr {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <26 27 28>;
-            layers = <0>;
-        };
-
         num-period {
             bindings = <&kp PERIOD>;
             key-positions = <31 32>;
@@ -109,10 +103,10 @@
 
             display-name = "Colemak";
             bindings = <
-&kp ESCAPE  &kp Q           &kp W           &kp F             &kp P            &kp B           &kp J        &kp L        &kp U              &kp Y            &kp SEMI         &kp EQUAL
-&kp GRAVE   &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &mt LC(T) G     &kp M        &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
-&kp TILDE   &mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C       &mt LC(V) D      &mt LC(N) V     &kp K        &kp H        &kp COMMA          &kp DOT          &kp FSLH         &kp NON_US_BACKSLASH
-                                            &lt 5 TAB         &lt 1 BACKSPACE  &lt 2 DELETE    &lt 3 ENTER  &lt 4 SPACE  &caps_word
+&kp ESCAPE     &kp Q           &kp W           &kp F              &kp P            &kp B          &kp J        &kp L        &kp U              &kp Y            &kp SEMI         &kp EQUAL
+&kp BACKSPACE  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_SHIFT S   &mt LCTRL T      &mt LC(T) G    &kp M        &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &kp SQT
+&kp DELETE     &mt LC(Z) Z     &mt LC(X) X     &mt LC(C) C        &mt LC(V) D      &mt LC(N) V    &kp K        &kp H        &kp COMMA          &kp DOT          &kp FSLH         &kp NON_US_BACKSLASH
+                                               &lt 5 PRINTSCREEN  &lt 1 BACKSPACE  &lt 2 TAB      &lt 3 ENTER  &lt 4 SPACE  &caps_word
             >;
 
             label = "Colemak";
@@ -125,6 +119,8 @@
 &none  &none     &none         &none       &none      &none    &kp INS        &kp LC(C)  &kp LC(V)     &kp LC(X)  &kp TAB    &kp LC(Y)
                                &none       &none      &none    &kp ENTER      &kp SPACE  &none
             >;
+
+            label = "Nav";
         };
 
         Numpad {
@@ -152,6 +148,8 @@
 &kp EQUAL  &kp PERCENT      &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp NON_US_BACKSLASH    &none  &none      &none       &none          &none     &none
                                          &kp UNDERSCORE        &kp MINUS              &kp PIPE                &none  &none      &none
             >;
+
+            label = "Symbols";
         };
 
         Function {
@@ -161,6 +159,8 @@
 &none  &kp HOME  &kp END  &kp INS  &kp F11  &kp F12    &none  &none      &none            &none          &none     &none
                           &none    &none    &none      &none  &none      &none
             >;
+
+            label = "Func";
         };
 
         Media {
@@ -170,6 +170,8 @@
 &none  &none     &none         &none       &none      &none    &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4
                                &none       &none      &none    &none              &none         &none
             >;
+
+            label = "Media";
         };
 
         Gaming_1 {
@@ -179,6 +181,8 @@
 &kp T      &kp I      &kp Z  &kp X  &kp C  &kp V        &none  &none  &none  &none  &none  &none
                              &kp M  &mo 7  &kp SPACE    &none  &none  &none
             >;
+
+            label = "Game 1";
         };
 
         Gaming_2 {
@@ -188,6 +192,8 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "Game 2";
         };
 
         League {
@@ -197,6 +203,8 @@
 &kp B    &kp A   &kp S   &kp D     &kp F      &kp G        &trans  &trans  &trans  &trans  &trans  &trans
                          &kp LALT  &kp LCTRL  &kp SPACE    &trans  &trans  &trans
             >;
+
+            label = "League";
         };
     };
 };
