@@ -17,6 +17,8 @@
     continue-list = <UNDERSCORE BACKSPACE DELETE MINUS>;
 };
 
+&mt { flavor = "tap-preferred"; };
+
 / {
     combos {
         compatible = "zmk,combos";
