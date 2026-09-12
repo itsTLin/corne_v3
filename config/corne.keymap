@@ -173,10 +173,10 @@
 
         Gaming_1 {
             bindings = <
-&kp ESC    &kp TAB    &kp Q  &kp W         &kp E  &kp R        &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &none
-&kp LCTRL  &kp LSHFT  &kp A  &kp S         &kp D  &kp F        &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &none
-&kp I      &kp Z      &kp X  &kp C         &kp V  &kp B        &kp F11  &kp F12  &none   &none   &none    &none
-                             &kp LEFT_ALT  &mo 7  &kp SPACE    &none    &none    &none
+&kp ESC       &kp TAB    &kp Q  &kp W  &kp E  &kp R        &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &none
+&kp LCTRL     &kp LSHFT  &kp A  &kp S  &kp D  &kp F        &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &none
+&kp LEFT_ALT  &kp Z      &kp X  &kp C  &kp V  &kp B        &kp F11  &kp F12  &none   &none   &none    &none
+                                &kp I  &mo 7  &kp SPACE    &none    &none    &none
             >;
 
             label = "Game 1";
